@@ -1,0 +1,13 @@
+﻿Django==4.1
+setuptools==49.2.1
+cffi==1.14.6
+urllib3==1.26.6
+azure-ai-textanalytics==5.1.0
+PyPDF2==1.27.9
+sounddevice==0.4.2
+wavio==0.0.4
+rank-bm25==0.2.1
+tqdm==4.62.1
+pandas==1.1.5
+spacy==3.1.1
+pickle5==0.0.11

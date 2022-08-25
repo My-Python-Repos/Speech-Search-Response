@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoodFellas</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'test_style1.css' %}" />
+
+    <style>
+        .mytext{
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+
+
+</head>
+
+
+<body>
+
+    <div class="header">
+        <img style="float:left; margin-left: 2%; padding-top: 0.3%" src=".\static\styles\_2x.png" alt="" width="127.3px" height="39.99">
+        <h6 class="title_bg">
+
+           <span class="BI-page-title">
+                &nbsp;&nbsp;Customer Service Assistant
+            </span>
+
+        </h6>
+    </div>
+
+        <br>
+      
+
+        <div class="align-center">
+            <input type="submit" id="submit_btn" value="Voice Record" class="button submit_btn" />
+            <p id = "Recording"></p>
+        </div>
+    </div>
+
+    <div id="result">
+
+    </div>
+
+</body>
+
+<script>
+    document.getElementById("submit_btn").onclick = function validate(e){
+        document.getElementById("Recording").innerText = "Recording voice.."
+        setTimeout(function(){
+            document.getElementById("Recording").innerText = "Generating results.."
+        }, 11000);
+
+        // Ajax function to call the nlp_func() in views.py from the html
+        $.ajax({
+                type: "GET",
+                url: "nlp_func/",
+                headers: {"key" : "json_data"}, 
+                success: function(responseData, textStatus, jqXHR) {
+                    if (typeof(responseData.message) == "string") {
+                        alert(responseData.message);
+                        window.location.replace("http://127.0.0.1:8000/");
+                        console.log(responseData.message)
+                        document.getElementById("Recording").style.display = 'None'
+                        document.getElementById("submit_btn").style.display='None'
+                    }
+                    else{
+                        document.getElementById('result').innerHTML = responseData;
+                        document.getElementById("Recording").style.display = 'None'
+                        document.getElementById("submit_btn").style.display='None'
+
+                    }
+                },
+        });
+    }
+
+</script>
+</html>
+

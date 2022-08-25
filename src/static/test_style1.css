@@ -1,0 +1,266 @@
+         html{
+            font-family: sans-serif;
+            line-height: 2;
+        }
+
+        body{
+            margin: 0;
+            font-family: sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            text-align: left;
+            background-color: #fff;
+        }
+
+
+        input[type=text],input[type=email], select{
+            max-width: 1280px;
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #ced4da;;
+            border-radius: 4px;
+            resize: horizontal;
+        }
+
+        input:disabled, select:disabled{
+            background-color:  #dee2e6;
+        }
+
+        label {
+            padding: 10px;
+            display: inline-block;
+        }
+
+        .BI-page-title{
+
+            width: 400px;
+            height: 22px;
+            color: #585858;
+            font: 21px Arial;
+            text-align: left;
+            margin-left: 8px;
+            margin-top: 14px;
+            float: left;
+            border-left: 2px solid #585858;
+            vertical-align: center;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #343a40
+        }
+
+        .navbar a {
+            float: left;
+            font-size: medium;
+            color: #dee2e6;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+
+
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: #dee2e6;
+            color: #343a40;
+        }
+
+        .header{
+            text-align: center;
+
+        }
+
+        .container {
+            width:90%;
+            margin-right: auto;
+            margin-left: auto;
+
+        }
+
+        .ques {
+            float: left;
+            width: 40%;
+            margin-top: 0px;
+            font-family: Arial;
+            font-size: 14px;
+            line-height: 22px;
+            color: #424242 !important;
+            background-color: #EEEEEE;
+            margin-bottom: 10px;
+            padding-left: 10px;
+            margin-left: 15px;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        .ans {
+            float: left;
+            width: 55%;
+            margin-top: 1px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .align-center{
+            text-align: center;
+        }
+
+        .align-right{
+            text-align: right;
+        }
+
+        .button {
+            font-size: 16px;
+            font-family: "frutiger-bold";
+            background-color: 	#E8E8E8;
+            border-radius: 28px;
+            border: 1px solid #62676e;
+            color: #000000;
+            padding: 13px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            cursor: pointer;
+            vertical-align: middle;
+            margin: 4px 0;
+        }
+
+        .submit_btn{
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+        }
+
+        .submit_btn:hover{
+            background-color: #E8E8E8;
+        }
+
+
+        .title_bg{
+            margin: 0;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #b3b3b3;
+            padding-top: 10px;
+        }
+
+
+        label{
+            padding: 8px;
+            padding-right: 1px;
+            padding-left: 2px;
+            margin-top: 2px;
+        }
+
+        .check{
+            padding: 3px;
+            margin: 0px;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            font: 14.5px Arial;
+
+        }
+        .tooltiptext{
+            font-size: 12px;
+            text-align: left;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 165px;
+            top: 75%;
+            left:50%;
+            margin-left: -80px;
+            background-color:  #636363;
+            color:  #ffffff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            padding-left: 5px;
+            padding-right: 5px;
+            text-align: left;
+            text-justify: auto;
+            position: absolute;
+            z-index: 1;
+
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+
+        .tooltip:hover{
+            color: #CE4B27;
+            cursor: pointer;
+        }
+
+        .tooltip-1:hover{
+            cursor: pointer;
+        }
+
+
+        input[type="radio"]{
+  margin: 10px 10px 10px 10px;
+
+        }
+    .popover-content {
+    padding: 9px 14px;
+    }
+
+    .result_container1 {
+        max-width: 90%;
+        max-height: 100%;
+        /*background-color: #fcfcfc;*/
+        background-color: #ffffff;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+        font-family: Arial;
+        /*border :1px solid #b3b3b3*/
+        /*border: 2px solid #E87722;*/
+
+    }
+
+.popover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+    max-width: 276px;
+    padding: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.42857143;
+    line-break: auto;
+    text-align: left;
+    text-align: start;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: none;
+    letter-spacing: normal;
+    word-break: normal;
+    word-spacing: normal;
+    word-wrap: normal;
+    white-space: normal;
+    font-size: 12px;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+    box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+}
+
+

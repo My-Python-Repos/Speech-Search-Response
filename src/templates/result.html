@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoodFellas</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="{% static 'test_style1.css' %}" />
+
+    <style>
+        .mytext{
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+
+
+</head>
+
+
+<body>
+
+    <!-- Loop through the result dictionary and display the contents on the webpage -->
+    <div id="results" style="width: 90%; margin-right: auto; margin-left: auto;">
+            {% for i in result %}
+                <a href="/static/{{i.link}}" target="_blank" rel="noopener noreferrer">{{ i.name }} </a>
+                <p style="font-size: 14px;"> {{ i.text }} </p>
+                <br>
+            {% endfor %}
+    </div>
+
+
+</body>
+
+</html>
+
