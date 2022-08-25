@@ -1,4 +1,4 @@
-# NLP-Speech-to-Text-and-Search-Utility-in-Django
+# Natrural Language processing to conver Speech to Text and then Search in document set. 
 This repository contains code for a Natural Language Processing utility built using Django which converts a user's speech into text, extracts key phrases from the converted text, uses these phrases to perform a full text search on  documentations, and finally display the top search results to the user in a UI.
 
 ![Architecure]()
